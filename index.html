@@ -27,6 +27,17 @@
   button:hover {
     background-color: #45a049;
   }
+ .checkbox-item {
+  display: flex;          /* places input and label in a row */
+  align-items: center;    /* vertically centers them */
+  margin-bottom: 5px;     /* spacing between items */
+}
+
+ .checkbox-item input {
+  width: auto;            /* prevent checkboxes from stretching */
+  margin-right: 10px;     /* space between checkbox and label */
+}
+
 </style>
 
     <title>Survey Form</title>
@@ -85,14 +96,22 @@ Let’s create something meaningful, together.
   }
 </script>
 <p>When are you usually available to participate?</p>
+  <div class="checkbox-item">
 <input type="checkbox" id="morning" value="weekday mornings" name="availability-times">
 <label for="morning">Weekday mornings</label>
+  </div>
+    <div class="checkbox-item">
 <input type="checkbox" id="afternoon" value="weekday afternoons" name="availability-times">
 <label for="afternoon">Weekday afternoons</label>
+      </div>
+      <div class="checkbox-item">
 <input type="checkbox" id="evening" value="weekday evenings" name="availability-times" >
 <label for="evening">Weekday evenings</label>
+        </div>
+        <div class="checkbox-item">
 <input type="checkbox" id="end" value="weekends" name="availability-times">
 <label for="end">Weekends</label>
+        </div>
 <p>Any comments or suggestions?</p>
 <textarea placeholder="Enter your comment here..." cols="20" rows="2">
 
